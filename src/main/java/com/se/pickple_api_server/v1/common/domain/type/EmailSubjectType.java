@@ -1,4 +1,4 @@
-package com.se.pickple_api_server.v1.common.domain.entity.type;
+package com.se.pickple_api_server.v1.common.domain.type;
 
 import lombok.Getter;
 

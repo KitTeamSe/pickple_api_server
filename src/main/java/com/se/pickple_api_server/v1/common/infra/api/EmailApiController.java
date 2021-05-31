@@ -23,7 +23,15 @@ public class EmailApiController {
     public SuccessResponse sendMail(@RequestBody EmailSendDto.Request request) {
         System.out.println("메일링 서비스 요청");
         emailSendService.simpleMailSender(request);
+        return new SuccessResponse(HttpStatus.OK.value(), "메일 전송 성공");
+    }
 
+    @ApiOperation(value ="태깅 메일")
+    @PostMapping(path= "/mail/notice")
+    @ResponseStatus(value = HttpStatus.OK)
+    public SuccessResponse sendMail(@RequestBody EmailSendDto.RequestTo request) {
+        System.out.println("태깅 메일링 서비스 요청");
+        emailSendService.noticeTagging(request);
         return new SuccessResponse(HttpStatus.OK.value(), "메일 전송 성공");
     }
 

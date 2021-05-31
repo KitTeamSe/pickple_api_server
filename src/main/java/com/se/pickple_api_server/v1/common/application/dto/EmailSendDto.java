@@ -14,4 +14,11 @@ public class EmailSendDto {
         private String subject;
         private String text;
     }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    static public class RequestTo {
+        private String to;
+    }
 }
